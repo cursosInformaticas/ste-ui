@@ -1,0 +1,271 @@
+<div class="row">
+  <div class="col-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center titulo_">Detalle de módulo estándar</h5>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <mat-form-field appearance="outline" class="custom-form-field">
+                  <mat-label>Tensión</mat-label>
+                  <mat-select [formControl]="toppings" multiple class="mat-mdc-option" >
+                    <mat-select-trigger >
+                      {{toppings.value?.[0] || ''}}
+                      <span *ngIf="(toppings.value?.length || 0) > 1" class="app-detalle">
+                        (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'tensión' :
+                        'tensiones'}})
+                      </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let topping of toppingList" [value]="topping" >{{topping}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <mat-form-field appearance="outline" class="custom-form-field">
+                  <mat-label>Región</mat-label>
+                  <mat-select [formControl]="regiones" multiple>
+                    <mat-select-trigger>
+                      {{regiones.value?.[0] || ''}}
+                      <span *ngIf="(regiones.value?.length || 0) > 1" class="app-detalle">
+                        (+{{(regiones.value?.length || 0) - 1}} {{regiones.value?.length === 2 ? 'región' :
+                        'regiones'}})
+                      </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let region of regionList" [value]="region">{{region}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <mat-form-field appearance="outline" class="custom-form-field">
+                  <mat-label>Tecnologia</mat-label>
+                  <mat-select [formControl]="tecnologias" multiple>
+                    <mat-select-trigger>
+                      {{tecnologias.value?.[0] || ''}}
+                      <span *ngIf="(tecnologias.value?.length || 0) > 1" class="app-detalle">
+                        (+{{(tecnologias.value?.length || 0) - 1}} {{tecnologias.value?.length === 2 ? 'tecnologia' :
+                        'tecnologias'}})
+                      </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let tecnologia of tecnologiaList"
+                      [value]="tecnologia">{{tecnologia}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <mat-form-field appearance="outline" class="custom-form-field">
+                  <mat-label>Tipo de instalación</mat-label>
+                  <mat-select [formControl]="tipoinstalaciones" multiple>
+                    <mat-select-trigger>
+                      {{tipoinstalaciones.value?.[0] || ''}}
+                      <span *ngIf="(tipoinstalaciones.value?.length || 0) > 1" class="app-detalle">
+                        (+{{(tipoinstalaciones.value?.length || 0) - 1}} {{tipoinstalaciones.value?.length === 2 ?
+                        'tipoinst' : 'tipoinstalaciones'}})
+                      </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let tipoinst of tipoinstalacionList"
+                      [value]="tipoinst">{{tipoinst}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <mat-form-field appearance="outline" class="custom-form-field">
+                  <mat-label>Tipo de sistema</mat-label>
+                  <mat-select [formControl]="tiposistemas" multiple>
+                    <mat-select-trigger>
+                      {{tiposistemas.value?.[0] || ''}}
+                      <span *ngIf="(tiposistemas.value?.length || 0) > 1" class="app-detalle">
+                        (+{{(tiposistemas.value?.length || 0) - 1}} {{tiposistemas.value?.length === 2 ? 'tiposistem' :
+                        'tiposistemas'}})
+                      </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let tiposistem of tiposistemaList"
+                      [value]="tiposistem">{{tiposistem}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <mat-form-field appearance="outline" class="custom-form-field">
+                  <mat-label>Tipo de celda</mat-label>
+                  <mat-select [formControl]="tipoceldas" multiple>
+                    <mat-select-trigger>
+                      {{tipoceldas.value?.[0] || ''}}
+                      <span *ngIf="(tipoceldas.value?.length || 0) > 1" class="app-detalle">
+                        (+{{(tipoceldas.value?.length || 0) - 1}} {{tipoceldas.value?.length === 2 ? 'tipocelda' :
+                        'tipoceldas'}})
+                      </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let tipocelda of tipoceldaList" [value]="tipocelda">{{tipocelda}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <mat-form-field appearance="outline" class="custom-form-field">
+                  <mat-label>Corriente de corto circuito</mat-label>
+                  <mat-select [formControl]="cccircuitos" multiple >
+                    <mat-select-trigger>
+                      {{cccircuitos.value?.[0] || ''}}
+                      <span *ngIf="(cccircuitos.value?.length || 0) > 1" class="app-detalle">
+                        (+{{(cccircuitos.value?.length || 0) - 1}} {{cccircuitos.value?.length === 2 ? 'cccircuito' :
+                        'cccircuitos'}})
+                      </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let cccircuito of cccircuitoList"
+                      [value]="cccircuito">{{cccircuito}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group row">
+              <div class="col-sm-12">
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 grid-margin">
+    <div class="card">
+      <div class="d-flex justify-content-between px-0">
+        <div class="col-lg-12">
+          <div>
+            <label class="badge badge-outline-white">
+              <button mat-button matTooltip="ADD" class="letra_button" [routerLink]="['/estandares/create']">
+                <mat-icon>add</mat-icon> Nuevo
+              </button>
+            </label>
+            <label class="badge badge-outline-white">
+              <button mat-button matTooltip="Exportar versiones de módulo estándar" class="letra_button">
+                <mat-icon>cloud_download</mat-icon> Exportar Formato
+              </button>
+            </label>
+            <label class="badge badge-outline-white">
+              <button mat-button matTooltip="Buscar" class="letra_button">
+                <mat-icon>search</mat-icon>Buscar
+              </button>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row gutters">
+  <div class="col-sm-12">
+
+    <div class="table-container">
+
+      <div class="table-container table-responsive">
+        <table  class=" table-xl " border="1" appTableResize >
+
+          <thead style="font-size: 10px; background-color: #00215A; color: aliceblue; text-align: center;">
+            <tr >
+              <th style="width: 100px; height: 50px;">acciones</th>
+              <th style="width: 100px; height: 50px;">Codigo</th>
+              <th style="width: 300px; height: 50px;">Descripción</th>
+              <th style="width: 300px; height: 50px;">Suministros Importados (USD)</th>
+              <th style="width: 300px; height: 50px;">Suministros Nacionales (USD)</th>
+              <th style="width: 300px; height: 50px;">Equipos Principales (USD)</th>
+              <th style="width: 300px; height: 50px;">Estruct. Metál. de Pórticos (USD)</th>
+              <th style="width: 300px; height: 50px;">Equip. Complem. (USD)</th>
+              <th style="width: 300px; height: 50px;">Aranceles (USD)</th>
+              <th style="width: 300px; height: 50px;">Aduanas (USD)</th>
+              <th style="width: 300px; height: 50px;">Fletes Suministros (USD)</th>
+              <th style="width: 300px; height: 50px;">Montaje Electromecanico (USD)</th>
+              <th style="width: 300px; height: 50px;">Obras Civiles (USD)</th>
+              <th style="width: 300px; height: 50px;">Prueb. y Pta en Serv (USD)</th>
+              <th style="width: 300px; height: 50px;">Ing. de Det. (USD)</th>
+              <th style="width: 300px; height: 50px;">Total Directo (USD)</th>
+              <th style="width: 300px; height: 50px;">GG del Cont. (USD)</th>
+              <th style="width: 300px; height: 50px;">Utilidades (USD)</th>
+              <th style="width: 300px; height: 50px;">Total General (USD)</th>
+              <th style="width: 300px; height: 50px;">Total Moneda Extranjera (USD)</th>
+              <th style="width: 300px; height: 50px;">Total Moneda Nacional (USD)</th>
+              <th style="width: 300px; height: 50px;">Componente Aluminio (USD)</th>
+              <th style="width: 300px; height: 50px;">Componente Cobre (USD)</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="font-size: 10px;">
+              <td>
+                <div class="d-flex">
+                  <button mat-mini-fab color="basic" matTooltip="Editar versión módulo"
+                    [routerLink]="['/addestandar' ] ">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-mini-fab color="basic" matTooltip="Eliminar versión módulo">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+              </td>
+              <td>CE-010COC1ESBAL</td>
+              <td>MÓDULO DE CELDA TIPO CONVENCIONAL</td>
+              <td>20226.</td>
+              <td>14169.</td>
+              <td>12856.</td>
+              <td>7369.</td>
+              <td>21538.</td>
+              <td>442. </td>
+              <td>666.</td>
+              <td>326.</td>
+              <td>14829.</td>
+              <td>7155.</td>
+              <td>3270.</td>
+              <td>2148.</td>
+              <td>57816.</td>
+              <td>2198.</td>
+              <td>62213.</td>
+              <td>20226.</td>
+              <td>41987.</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
